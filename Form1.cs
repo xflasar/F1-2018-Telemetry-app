@@ -29,7 +29,7 @@ namespace UDP
         // Temp for data
         int lastSpeedNumber = 0;
         int numSpeed = 0;
-
+        int maxBrakeTemp = 1400;
 
 
         UdpClient client = new UdpClient(20777);
@@ -44,19 +44,24 @@ namespace UDP
             timer1.Start();
             ser2 = chart1.Series[0];
             ser2.Name = "Speed";
+
+            // Chart for 4 tire temps
+            CreateChartAreas(chart5, 4);
+            CreateChartAreas(chart6, 4);
+
+
+
+            // Chart for 4 brake temps
+
+
+
             //ser2.ChartType = SeriesChartType.Line;
-            StyleChart(chart1, "Speed", 0, 350, new int[] { 255,32,26,71}, new int[] { 255,0,255,255});
-            StyleChart(chart2, "RPM", 0, 17000, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
-            StyleChart(chart3, "Brake", 0, 100, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
-            StyleChart(chart4, "Throttle", 0, 100, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
-            StyleChart(chart5, "Tire Temperature Front Left", 0, 100, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
-            StyleChart(chart6, "Tire Temperature Front Right", 0, 100, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
-            StyleChart(chart7, "Tire Temperature Back Left", 0, 100, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
-            StyleChart(chart8, "Tire Temperature Back Right", 0, 100, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
-            StyleChart(chart9, "Brake Temperature Front Left", 0, 100, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
-            StyleChart(chart10, "Brake Temperature Front Right", 0, 100, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
-            StyleChart(chart11, "Brake Temperature Back Left", 0, 100, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
-            StyleChart(chart12, "Brake Temperature Back Right", 0, 100, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
+            StyleChart(chart1, 300, 150,"Speed", 0, 350, 1, new int[] { 255,32,26,71}, new int[] { 255,0,255,255});
+            StyleChart(chart2, 300, 150, "RPM", 0, 17000, 1, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
+            StyleChart(chart3, 300, 150, "Brake", 0, 100, 1, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
+            StyleChart(chart4, 300, 150, "Throttle", 0, 100, 1, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
+            StyleChart(chart5, 240, 220, "Tire Temperature", 0, 140, 4, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
+            StyleChart(chart6, 240, 220, "Brake Temperature", 0, 1400, 4, new int[] { 255, 32, 26, 71 }, new int[] { 255, 0, 255, 255 });
             //chart1.DataSource = SpeedData;
             //chart1.DataBind();
             // 
@@ -66,63 +71,95 @@ namespace UDP
             charts.Add(chart4);
             charts.Add(chart5);
             charts.Add(chart6);
-            charts.Add(chart7);
-            charts.Add(chart8);
-            charts.Add(chart9);
-            charts.Add(chart10);
-            charts.Add(chart11);
-            charts.Add(chart12);
+            charts.Add(chart6);
 
+
+            // Finishing Style chart
+            chart5.Series[0].Name = "Tire Surf Temps Front Left";
+            chart5.Series[1].Name = "Tire Surf Temps Front Right";
+            chart5.Series[2].Name = "Tire Surf Temps Back Left";
+            chart5.Series[3].Name = "Tire Surf Temps Back Right";
+
+            chart6.Series[0].Name = "Brake Temps Front Left";
+            chart6.Series[1].Name = "Brake Temps Front Right";
+            chart6.Series[2].Name = "Brake Temps Back Left";
+            chart6.Series[3].Name = "Brake Temps Back Right";
         }
 
-        private void StyleChart(Chart chart, string title, int min, int max, int[] backColor, int[] borderColor)
+        // Create Chart Area for TireTemps Chart
+        private void CreateChartAreas(Chart chart, int numOfChartAreas)
+        {
+            List<ChartArea> chartAreaList = new List<ChartArea>();
+            chart.ChartAreas.Clear();
+            
+            for (int i = 0; i < numOfChartAreas; i++)
+            {
+                ChartArea area = new ChartArea();
+                area.AxisX.Enabled = AxisEnabled.False;
+                //area.AxisX.Interval = 50;
+                //area.AxisX.Maximum = 400;
+                chartAreaList.Add(area);
+            }
+
+
+            foreach (var item in chartAreaList)
+            {
+                
+                chart.ChartAreas.Add(item);
+            }
+        }
+
+        private void StyleChart(Chart chart, int width, int height, string title, int min, int max, int numSeries, int[] backColor, int[] borderColor)
         {
 
             // Basic style
             chart.BackColor = Color.FromArgb(backColor[0], backColor[1], backColor[2], backColor[3]);
             chart.BorderlineDashStyle = ChartDashStyle.Solid;
             chart.BorderlineColor = Color.Black;
-            chart.Width = 300;
-            chart.Height = 150;
+            chart.Width = width;
+            chart.Height = height;
 
             // Legend (Not needed now)
-
-            // Chart area
-            chart.ChartAreas[0].Area3DStyle.Enable3D = false;
-            chart.ChartAreas[0].Area3DStyle.WallWidth = 0;
-            chart.ChartAreas[0].BackColor = Color.FromArgb(100, Color.Black);
-
-            // Axis
-            chart.ChartAreas[0].AxisX.LineColor = Color.Red;
-            chart.ChartAreas[0].AxisX.MajorGrid.Enabled = true;
-            chart.ChartAreas[0].AxisX.MinorGrid.Enabled = false;
-            chart.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.FromArgb(50, Color.Black);
-            chart.ChartAreas[0].AxisX.LabelStyle.Font = new System.Drawing.Font("Arial", 8F);
-
-            chart.ChartAreas[0].AxisY.LineColor = Color.Red;
-            chart.ChartAreas[0].AxisY.MajorGrid.Enabled = true;
-            chart.ChartAreas[0].AxisY.MinorGrid.Enabled = false;
-            chart.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.FromArgb(50, Color.Black);
-            chart.ChartAreas[0].AxisY.LabelStyle.Font = new System.Drawing.Font("Arial", 8F);
-
-            chart.ClientSize = new Size(chart.Size.Width - 10, chart.Size.Height - 10);
-            
-            if(chart.Size.Width <= 100 || chart.Size.Height <= 100)
+            foreach (var item in chart.ChartAreas)
             {
-                chart.ChartAreas[0].Position.Width = 15;
-                chart.ChartAreas[0].Position.Height = 15;
+                
+                // Chart area
+                item.Area3DStyle.Enable3D = false;
+                item.Area3DStyle.WallWidth = 0;
+                item.BackColor = Color.FromArgb(100, Color.Black);
+
+                // Axis
+                item.AxisX.LineColor = Color.Red;
+                item.AxisX.MajorGrid.Enabled = true;
+                item.AxisX.MinorGrid.Enabled = false;
+                item.AxisX.MajorGrid.LineColor = Color.FromArgb(50, Color.Black);
+                item.AxisX.LabelStyle.Font = new System.Drawing.Font("Arial", 8F);
+                //item.AxisX.Maximum = 400;
+                
+                item.AxisY.LineColor = Color.Red;
+                item.AxisY.MajorGrid.Enabled = true;
+                item.AxisY.MinorGrid.Enabled = false;
+                item.AxisY.MajorGrid.LineColor = Color.FromArgb(50, Color.Black);
+                item.AxisY.LabelStyle.Font = new System.Drawing.Font("Arial", 8F);
+                
+                item.AxisY.Minimum = min;
+                item.AxisY.Maximum = max;
             }
 
-
-            //
-            
             // Title
             chart.Titles.Add(new Title(title));
             chart.Legends.Clear();
-            chart.ChartAreas[0].AxisY.Minimum = min;
-            chart.ChartAreas[0].AxisY.Maximum = max;
-            
-            chart.Series[0].BorderColor = Color.FromArgb(borderColor[0], borderColor[1], borderColor[2], borderColor[3]);
+            chart.Series.Clear();
+            for (int i = 0; i < numSeries; i++)
+            {
+                Series series = new Series();
+                chart.Series.Add(series);
+                chart.Series[i].ChartArea = chart.ChartAreas[i].Name;
+            }
+            foreach (var item in chart.Series)
+            {
+                item.BorderColor = Color.FromArgb(borderColor[0], borderColor[1], borderColor[2], borderColor[3]);
+            }
             
 
         }
@@ -134,67 +171,102 @@ namespace UDP
 
         private void MoveGraph(Chart chart)
         {
-            if(chart.Series[0].Points.Count() > 500)
+            foreach (var serie in chart.Series)
             {
-                chart.ChartAreas[0].AxisX.Minimum = chart.ChartAreas[0].AxisX.Minimum + 1;
+                double min = chart.ChartAreas[chart.ChartAreas.IndexOf(serie.ChartArea)].AxisX.Minimum;
+                double max = chart.ChartAreas[chart.ChartAreas.IndexOf(serie.ChartArea)].AxisX.Maximum;
+                if (serie.Points.Count() >= 400 && (max - min ) >= 400)
+                {
+                    chart.ChartAreas[chart.ChartAreas.IndexOf(serie.ChartArea)].AxisX.Minimum = chart.ChartAreas[chart.ChartAreas.IndexOf(serie.ChartArea)].AxisX.Minimum + 1;
+                }
             }
         }
 
         private void StartListening()
         {
             ar_ = client.BeginReceive(Receive, new object());
-            
-            // Updating tires surface temperature
-            tireSurfTempFL.BeginInvoke((Action)delegate { tireSurfTempFL.Text = "Surf Temps: " + pCarTelemetryData.GetTiresSurfaceTemperature1().ToString() + " °C"; });
-            tireSurfTempFR.BeginInvoke((Action)delegate { tireSurfTempFR.Text = "Surf Temps: " + pCarTelemetryData.GetTiresSurfaceTemperature2().ToString() + " °C"; });
-            tireSurfTempBL.BeginInvoke((Action)delegate { tireSurfTempBL.Text = "Surf Temps: " + pCarTelemetryData.GetTiresSurfaceTemperature3().ToString() + " °C"; });
-            tireSurfTempBR.BeginInvoke((Action)delegate { tireSurfTempBR.Text = "Surf Tempse: " + pCarTelemetryData.GetTiresSurfaceTemperature4().ToString() + " °C"; });
-
-            // Updating tires inner temperature
-            tireInnerTempFL.BeginInvoke((Action)delegate { tireInnerTempFL.Text = "Inner Temps: " + pCarTelemetryData.GetTiresInnerTemperature1().ToString() + " °C"; });
-            tireInnerTempFR.BeginInvoke((Action)delegate { tireInnerTempFR.Text = "Inner Temps: " + pCarTelemetryData.GetTiresInnerTemperature2().ToString() + " °C"; });
-            tireInnerTempBL.BeginInvoke((Action)delegate { tireInnerTempBL.Text = "Inner Temps: " + pCarTelemetryData.GetTiresInnerTemperature3().ToString() + " °C"; });
-            tireInnerTempBR.BeginInvoke((Action)delegate { tireInnerTempBR.Text = "Inner Temps: " + pCarTelemetryData.GetTiresInnerTemperature4().ToString() + " °C"; });
-
-            // Updating tires pressure
-            tirePressureFL.BeginInvoke((Action)delegate { tirePressureFL.Text = "Pressure: " + pCarTelemetryData.GetTiresPressure1().ToString() + " PSI"; });
-            tirePressureFR.BeginInvoke((Action)delegate { tirePressureFR.Text = "Pressure: " + pCarTelemetryData.GetTiresPressure2().ToString() + " PSI"; });
-            tirePressureBL.BeginInvoke((Action)delegate { tirePressureBL.Text = "Pressure: " + pCarTelemetryData.GetTiresPressure3().ToString() + " PSI"; });
-            tirePressureBR.BeginInvoke((Action)delegate { tirePressureBR.Text = "Pressure: " + pCarTelemetryData.GetTiresPressure4().ToString() + " PSI"; });
-
-            // Updating brake temperature
-            brakeTempFL.BeginInvoke((Action)delegate { brakeTempFL.Text = "Brake Temps: " + pCarTelemetryData.GetBrakesTemperature1().ToString() + " °C"; });
-            brakeTempFR.BeginInvoke((Action)delegate { brakeTempFR.Text = "Brake Temps: " + pCarTelemetryData.GetBrakesTemperature2().ToString() + " °C"; });
-            brakeTempBL.BeginInvoke((Action)delegate { brakeTempBL.Text = "Brake Temps: " + pCarTelemetryData.GetBrakesTemperature3().ToString() + " °C"; });
-            brakeTempBR.BeginInvoke((Action)delegate { brakeTempBR.Text = "Brake Temps: " + pCarTelemetryData.GetBrakesTemperature4().ToString() + " °C"; });
-
-
-
-            
-            chart1.BeginInvoke((Action)delegate
+            if (pHeader.GetPacketFormat() == 2018)
             {
-                lblSpeed.Text = pCarTelemetryData.GetSpeed().ToString();
-                chart1.Series[0].Points.AddY(pCarTelemetryData.GetSpeed());
-                lblRPM.Text = pCarTelemetryData.GetEngineRPM().ToString();
-                chart2.Series[0].Points.AddY(pCarTelemetryData.GetEngineRPM());
-                lblThrottle.Text = pCarTelemetryData.GetThrottle().ToString() + " %";
-                chart3.Series[0].Points.AddY(pCarTelemetryData.GetBrake());
-                lblBrake.Text = pCarTelemetryData.GetBrake().ToString() + " %";
-                chart4.Series[0].Points.AddY(pCarTelemetryData.GetThrottle());
 
-                chart1.Series[0].Points[chart1.Series[0].Points.Count() - 1].BorderColor = Color.FromArgb(255, (int)(pCarTelemetryData.GetSpeed() / 1.2f), 255 - (int)(pCarTelemetryData.GetSpeed() / 1.2f), 0);
+                // Updating tires surface temperature
+                tireSurfTempFL.BeginInvoke((Action)delegate { tireSurfTempFL.Text = "Surf Temps: " + pCarTelemetryData.GetTiresSurfaceTemperature1().ToString() + " °C"; });
+                tireSurfTempFR.BeginInvoke((Action)delegate { tireSurfTempFR.Text = "Surf Temps: " + pCarTelemetryData.GetTiresSurfaceTemperature2().ToString() + " °C"; });
+                tireSurfTempBL.BeginInvoke((Action)delegate { tireSurfTempBL.Text = "Surf Temps: " + pCarTelemetryData.GetTiresSurfaceTemperature3().ToString() + " °C"; });
+                tireSurfTempBR.BeginInvoke((Action)delegate { tireSurfTempBR.Text = "Surf Temps: " + pCarTelemetryData.GetTiresSurfaceTemperature4().ToString() + " °C"; });
 
-                pictureBoxBrakeFL.BackColor = GetColorTempBrake(pCarTelemetryData.GetBrakesTemperature1());
-                pictureBoxBrakeFR.BackColor = Color.FromArgb(255, pCarTelemetryData.GetBrakesTemperature2() / 5, 255 - (pCarTelemetryData.GetBrakesTemperature1() / 5), 0);
-                pictureBoxBrakeBL.BackColor = Color.FromArgb(255, pCarTelemetryData.GetBrakesTemperature3() / 5, 255 - (pCarTelemetryData.GetBrakesTemperature1() / 5), 0);
-                pictureBoxBrakeBR.BackColor = Color.FromArgb(255, pCarTelemetryData.GetBrakesTemperature4() / 5, 255 - (pCarTelemetryData.GetBrakesTemperature1() / 5), 0);
+                // Updating tires inner temperature
+                tireInnerTempFL.BeginInvoke((Action)delegate { tireInnerTempFL.Text = "Inner Temps: " + pCarTelemetryData.GetTiresInnerTemperature1().ToString() + " °C"; });
+                tireInnerTempFR.BeginInvoke((Action)delegate { tireInnerTempFR.Text = "Inner Temps: " + pCarTelemetryData.GetTiresInnerTemperature2().ToString() + " °C"; });
+                tireInnerTempBL.BeginInvoke((Action)delegate { tireInnerTempBL.Text = "Inner Temps: " + pCarTelemetryData.GetTiresInnerTemperature3().ToString() + " °C"; });
+                tireInnerTempBR.BeginInvoke((Action)delegate { tireInnerTempBR.Text = "Inner Temps: " + pCarTelemetryData.GetTiresInnerTemperature4().ToString() + " °C"; });
+
+                // Updating tires pressure
+                tirePressureFL.BeginInvoke((Action)delegate { tirePressureFL.Text = "Pressure: " + pCarTelemetryData.GetTiresPressure1().ToString() + " PSI"; });
+                tirePressureFR.BeginInvoke((Action)delegate { tirePressureFR.Text = "Pressure: " + pCarTelemetryData.GetTiresPressure2().ToString() + " PSI"; });
+                tirePressureBL.BeginInvoke((Action)delegate { tirePressureBL.Text = "Pressure: " + pCarTelemetryData.GetTiresPressure3().ToString() + " PSI"; });
+                tirePressureBR.BeginInvoke((Action)delegate { tirePressureBR.Text = "Pressure: " + pCarTelemetryData.GetTiresPressure4().ToString() + " PSI"; });
+
+                // Updating brake temperature
+                brakeTempFL.BeginInvoke((Action)delegate { brakeTempFL.Text = "Brake Temps: " + pCarTelemetryData.GetBrakesTemperature1().ToString() + " °C"; });
+                brakeTempFR.BeginInvoke((Action)delegate { brakeTempFR.Text = "Brake Temps: " + pCarTelemetryData.GetBrakesTemperature2().ToString() + " °C"; });
+                brakeTempBL.BeginInvoke((Action)delegate { brakeTempBL.Text = "Brake Temps: " + pCarTelemetryData.GetBrakesTemperature3().ToString() + " °C"; });
+                brakeTempBR.BeginInvoke((Action)delegate { brakeTempBR.Text = "Brake Temps: " + pCarTelemetryData.GetBrakesTemperature4().ToString() + " °C"; });
+
+
+
+
+                chart1.BeginInvoke((Action)delegate
+                {
+                    lblSpeed.Text = pCarTelemetryData.GetSpeed().ToString();
+                    chart1.Series[0].Points.AddY(pCarTelemetryData.GetSpeed());
+                    chart1.Series[0].Points[chart1.Series[0].Points.Count() - 1].BorderColor = Color.FromArgb(255, (int)(pCarTelemetryData.GetSpeed() / 1.2f), 255 - (int)(pCarTelemetryData.GetSpeed() / 1.2f), 0);
+
+                    lblRPM.Text = pCarTelemetryData.GetEngineRPM().ToString();
+                    chart2.Series[0].Points.AddY(pCarTelemetryData.GetEngineRPM());
+                    chart2.ChartAreas[0].AxisY.Minimum = pCarStatus.GetIdleRPM();
+                    chart2.ChartAreas[0].AxisY.Maximum = pCarStatus.GetMaxRPM();
+
+                    lblThrottle.Text = pCarTelemetryData.GetThrottle().ToString() + " %";
+                    chart3.Series[0].Points.AddY(pCarTelemetryData.GetBrake());
+
+                    lblBrake.Text = pCarTelemetryData.GetBrake().ToString() + " %";
+                    chart4.Series[0].Points.AddY(pCarTelemetryData.GetThrottle());
+
+                    //Tires chart
+                    
+                    chart5.Series[0].Points.AddY(pCarTelemetryData.GetTiresSurfaceTemperature1());
+
+                    chart5.Series[1].Points.AddY(pCarTelemetryData.GetTiresSurfaceTemperature2());
+
+                    chart5.Series[2].Points.AddY(pCarTelemetryData.GetTiresSurfaceTemperature3());
+
+                    chart5.Series[3].Points.AddY(pCarTelemetryData.GetTiresSurfaceTemperature4());
+
+                    
+                    // There should be automatic increse in max temps -> Brakes and tires into array
+                    // Brake chart
+                    
+                    chart6.Series[0].Points.AddY(pCarTelemetryData.GetBrakesTemperature1());
+
+                    chart6.Series[1].Points.AddY(pCarTelemetryData.GetBrakesTemperature2());
+
+                    chart6.Series[2].Points.AddY(pCarTelemetryData.GetBrakesTemperature3());
+
+                    chart6.Series[3].Points.AddY(pCarTelemetryData.GetBrakesTemperature4());
+
+
+                    pictureBoxBrakeFL.BackColor = GetColorTempBrake(pCarTelemetryData.GetBrakesTemperature1());
+                    pictureBoxBrakeFR.BackColor = GetColorTempBrake(pCarTelemetryData.GetBrakesTemperature2());
+                    pictureBoxBrakeBL.BackColor = GetColorTempBrake(pCarTelemetryData.GetBrakesTemperature3());
+                    pictureBoxBrakeBR.BackColor = GetColorTempBrake(pCarTelemetryData.GetBrakesTemperature4());
 
                 // Move graph so it stays indented and visible
                 foreach (var item in charts)
-                {
-                    MoveGraph(item);
-                }
-            });
+                    {
+                        MoveGraph(item);
+                    }
+                });
+            }
         }
 
         private Color GetColorTempBrake(int temps)
@@ -202,7 +274,7 @@ namespace UDP
             int r = 0;
             int b = 0;
             int g = 0;
-            int colorInt = 0;
+            /*
             if (0 <= temps && temps <= 433) {
                 b = (int)(255 - temps/1.7f);
                 g = (int)(temps /1.7f);
@@ -216,45 +288,15 @@ namespace UDP
             {
                 g =(int) (255 - temps/5.1f);
                 r = (int)(temps/5.1f);
-            }
+            }*/
             return Color.FromArgb(255,r, g, b);
         }
         private void Receive(IAsyncResult ar)
         {
             IPEndPoint ip = new IPEndPoint(IPAddress.Any, 20777);
             byte[] bytes = client.EndReceive(ar, ref ip);
-            //Console.WriteLine(bytes.Length);
-            /*if(bytes.Length == 1085)
-            {
-                Console.WriteLine("Format: " + BitConverter.ToUInt16(bytes, 0)); // 2 Byte
-                Console.WriteLine("Version: " + BitConverter.ToString(bytes, 2, 1)); // 1 Byte
-                Console.WriteLine("PacketID: " + BitConverter.ToString(bytes, 3, 1)); // 1 Byte
-                Console.WriteLine("sessionUID: " + BitConverter.ToUInt64(bytes, 4)); // 8 Byte
-                Console.WriteLine("sessionTime: " + BitConverter.ToSingle(bytes, 12)); // 4 Byte
-                Console.WriteLine("frameIdentifier: " + BitConverter.ToInt32(bytes, 16)); // 4 Byte
-                Console.WriteLine("PlayerCarIndex: " + BitConverter.ToString(bytes, 20,1)); // 1 Byte
-            }*/
+            
             GetDataIntoSeriazle(bytes);
-            string message = Encoding.ASCII.GetString(bytes);
-            int offset = 0;
-            int remaining = bytes.Length;
-            byte[] byteArray = Encoding.UTF8.GetBytes(message);
-            //byte[] byteArray = Encoding.ASCII.GetBytes(contents);
-            MemoryStream stream = new MemoryStream(byteArray);
-            while (remaining > 0)
-            {
-                int read = stream.Read(bytes, offset, remaining);
-                if(read <= 0)
-                {
-                    
-                }
-                //Console.WriteLine(read);
-                remaining -= read;
-                offset += read;
-            }
-            //Console.WriteLine("From {0} received: {1} ", ip.Address.ToString(), message);
-            msgLea = message;
-            //richTextBox1.Text += message;
             StartListening();
         }
 

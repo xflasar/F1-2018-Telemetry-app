@@ -41,110 +41,110 @@ namespace UDP
         float m_ersDeployedThisLap;
 
         #region Getters
-        public Byte GetTractionControl(Byte value)
+        public Byte GetTractionControl()
         {
-            return m_tractionControl = value;
+            return m_tractionControl;
         }
 
-        public Byte GetAntiLockBrakes(Byte value)
+        public Byte GetAntiLockBrakes()
         {
             return m_antiLockBrakes;
         }
 
-        public Byte GetFuelMix(Byte value)
+        public Byte GetFuelMix()
         {
             return m_fuelMix;
         }
 
-        public float GetFuelInTank(float value)
+        public float GetFuelInTank()
         {
             return m_fuelInTank;
         }
 
-        public float GetFuelCapacity(float value)
+        public float GetFuelCapacity()
         {
             return m_fuelCapacity;
         }
-        public UInt16 GetMaxRPM(UInt16 value)
+        public UInt16 GetMaxRPM()
         {
             return m_maxRPM;
         }
 
-        public UInt16 GetIdleRPM(UInt16 value)
+        public UInt16 GetIdleRPM()
         {
             return m_idleRPM;
         }
 
-        public Byte GetMaxGears(Byte value)
+        public Byte GetMaxGears()
         {
             return m_maxGears;
         }
 
-        public Byte GetDRSAllowed(Byte value)
+        public Byte GetDRSAllowed()
         {
             return m_drsAllowed;
         }
 
-        public Byte GetTireWear1(Byte value)
+        public Byte GetTireWear1()
         {
             return m_tyresWear1;
         }
-        public Byte GetTireWear2(Byte value)
+        public Byte GetTireWear2()
         {
             return m_tyresWear2;
         }
-        public Byte GetTireWear3(Byte value)
+        public Byte GetTireWear3()
         {
             return m_tyresWear3;
         }
-        public Byte GetTireWear4(Byte value)
+        public Byte GetTireWear4()
         {
             return m_tyresWear4;
         }
 
-        public Byte GetTireCompound(Byte value)
+        public Byte GetTireCompound()
         {
             return m_tyreCompound;
         }
 
-        public Byte GetTireDamage1(Byte value)
+        public Byte GetTireDamage1()
         {
             return m_tyresDamage1;
         }
-        public Byte GetTireDamage2(Byte value)
+        public Byte GetTireDamage2()
         {
             return m_tyresDamage2;
         }
-        public Byte GetTireDamage3(Byte value)
+        public Byte GetTireDamage3()
         {
             return m_tyresDamage3;
         }
-        public Byte GetTireDamage4(Byte value)
+        public Byte GetTireDamage4()
         {
             return m_tyresDamage4;
         }
 
-        public float GetERSStoredEnergy(float value)
+        public float GetERSStoredEnergy()
         {
             return m_ersStoredEnergy;
         }
         
-        public Byte GetERSDeployMode(Byte value)
+        public Byte GetERSDeployMode()
         {
             return m_ersDeployMode;
         }
 
-        public float GetERSHarvestedEnergyThisLapKinetic(float value)
+        public float GetERSHarvestedEnergyThisLapKinetic()
         {
             return m_ersHarvestedThisLapKinetic;
         }
 
-        public float GetERSHarvestedEnergyThisLapHeat(float value)
+        public float GetERSHarvestedEnergyThisLapHeat()
         {
             return m_ersHarvestedThisLapHeat;
         }
 
-        public float GetERSDeployedThisLap(float value)
+        public float GetERSDeployedThisLap()
         {
              return m_ersDeployedThisLap;
         }

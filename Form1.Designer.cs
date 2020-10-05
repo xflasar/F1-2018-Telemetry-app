@@ -48,24 +48,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -110,12 +92,6 @@
             this.lblBrake = new System.Windows.Forms.Label();
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart7 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart8 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart9 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart10 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart11 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart12 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTireFL)).BeginInit();
@@ -133,12 +109,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart12)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -167,7 +137,7 @@
             // 
             this.lblRPM.AutoSize = true;
             this.lblRPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRPM.Location = new System.Drawing.Point(188, 437);
+            this.lblRPM.Location = new System.Drawing.Point(118, 427);
             this.lblRPM.Name = "lblRPM";
             this.lblRPM.Size = new System.Drawing.Size(24, 26);
             this.lblRPM.TabIndex = 2;
@@ -177,7 +147,7 @@
             // 
             this.tireSurfTempBR.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tireSurfTempBR.AutoSize = true;
-            this.tireSurfTempBR.Location = new System.Drawing.Point(1185, 499);
+            this.tireSurfTempBR.Location = new System.Drawing.Point(1146, 429);
             this.tireSurfTempBR.Name = "tireSurfTempBR";
             this.tireSurfTempBR.Size = new System.Drawing.Size(87, 13);
             this.tireSurfTempBR.TabIndex = 3;
@@ -188,7 +158,7 @@
             // 
             this.tireSurfTempBL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tireSurfTempBL.AutoSize = true;
-            this.tireSurfTempBL.Location = new System.Drawing.Point(853, 499);
+            this.tireSurfTempBL.Location = new System.Drawing.Point(814, 429);
             this.tireSurfTempBL.Name = "tireSurfTempBL";
             this.tireSurfTempBL.Size = new System.Drawing.Size(87, 13);
             this.tireSurfTempBL.TabIndex = 2;
@@ -199,7 +169,7 @@
             // 
             this.tireSurfTempFR.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tireSurfTempFR.AutoSize = true;
-            this.tireSurfTempFR.Location = new System.Drawing.Point(1185, 259);
+            this.tireSurfTempFR.Location = new System.Drawing.Point(1146, 189);
             this.tireSurfTempFR.Name = "tireSurfTempFR";
             this.tireSurfTempFR.Size = new System.Drawing.Size(87, 13);
             this.tireSurfTempFR.TabIndex = 1;
@@ -212,7 +182,7 @@
             this.tireSurfTempFL.AutoSize = true;
             this.tireSurfTempFL.BackColor = System.Drawing.Color.Transparent;
             this.tireSurfTempFL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tireSurfTempFL.Location = new System.Drawing.Point(853, 259);
+            this.tireSurfTempFL.Location = new System.Drawing.Point(814, 189);
             this.tireSurfTempFL.Name = "tireSurfTempFL";
             this.tireSurfTempFL.Size = new System.Drawing.Size(87, 13);
             this.tireSurfTempFL.TabIndex = 0;
@@ -226,7 +196,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(100, 170);
+            this.chart1.Location = new System.Drawing.Point(30, 160);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -240,7 +210,7 @@
             // 
             this.lblSpeed.AutoSize = true;
             this.lblSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpeed.Location = new System.Drawing.Point(188, 141);
+            this.lblSpeed.Location = new System.Drawing.Point(118, 131);
             this.lblSpeed.Name = "lblSpeed";
             this.lblSpeed.Size = new System.Drawing.Size(25, 26);
             this.lblSpeed.TabIndex = 5;
@@ -250,7 +220,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(95, 141);
+            this.label6.Location = new System.Drawing.Point(25, 131);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 26);
             this.label6.TabIndex = 6;
@@ -260,7 +230,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(95, 437);
+            this.label7.Location = new System.Drawing.Point(25, 427);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 26);
             this.label7.TabIndex = 2;
@@ -273,7 +243,7 @@
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(100, 466);
+            this.chart2.Location = new System.Drawing.Point(30, 456);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
@@ -289,7 +259,7 @@
             this.pictureBoxTireFL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxTireFL.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTireFL.Image")));
             this.pictureBoxTireFL.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxTireFL.InitialImage")));
-            this.pictureBoxTireFL.Location = new System.Drawing.Point(955, 259);
+            this.pictureBoxTireFL.Location = new System.Drawing.Point(916, 189);
             this.pictureBoxTireFL.Name = "pictureBoxTireFL";
             this.pictureBoxTireFL.Size = new System.Drawing.Size(40, 68);
             this.pictureBoxTireFL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -302,7 +272,7 @@
             this.pictureBoxChassis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxChassis.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxChassis.Image")));
             this.pictureBoxChassis.InitialImage = null;
-            this.pictureBoxChassis.Location = new System.Drawing.Point(1001, 210);
+            this.pictureBoxChassis.Location = new System.Drawing.Point(962, 140);
             this.pictureBoxChassis.Name = "pictureBoxChassis";
             this.pictureBoxChassis.Size = new System.Drawing.Size(132, 357);
             this.pictureBoxChassis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -315,7 +285,7 @@
             this.pictureBoxWingL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxWingL.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxWingL.Image")));
             this.pictureBoxWingL.InitialImage = null;
-            this.pictureBoxWingL.Location = new System.Drawing.Point(1001, 210);
+            this.pictureBoxWingL.Location = new System.Drawing.Point(962, 140);
             this.pictureBoxWingL.Name = "pictureBoxWingL";
             this.pictureBoxWingL.Size = new System.Drawing.Size(50, 32);
             this.pictureBoxWingL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -328,7 +298,7 @@
             this.pictureBoxWingR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxWingR.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxWingR.Image")));
             this.pictureBoxWingR.InitialImage = null;
-            this.pictureBoxWingR.Location = new System.Drawing.Point(1082, 210);
+            this.pictureBoxWingR.Location = new System.Drawing.Point(1043, 140);
             this.pictureBoxWingR.Name = "pictureBoxWingR";
             this.pictureBoxWingR.Size = new System.Drawing.Size(51, 32);
             this.pictureBoxWingR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -341,7 +311,7 @@
             this.pictureBoxTireFR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxTireFR.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTireFR.Image")));
             this.pictureBoxTireFR.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxTireFR.InitialImage")));
-            this.pictureBoxTireFR.Location = new System.Drawing.Point(1139, 259);
+            this.pictureBoxTireFR.Location = new System.Drawing.Point(1100, 189);
             this.pictureBoxTireFR.Name = "pictureBoxTireFR";
             this.pictureBoxTireFR.Size = new System.Drawing.Size(40, 68);
             this.pictureBoxTireFR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -354,7 +324,7 @@
             this.pictureBoxTireBL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxTireBL.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTireBL.Image")));
             this.pictureBoxTireBL.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxTireBL.InitialImage")));
-            this.pictureBoxTireBL.Location = new System.Drawing.Point(955, 499);
+            this.pictureBoxTireBL.Location = new System.Drawing.Point(916, 429);
             this.pictureBoxTireBL.Name = "pictureBoxTireBL";
             this.pictureBoxTireBL.Size = new System.Drawing.Size(40, 68);
             this.pictureBoxTireBL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -367,7 +337,7 @@
             this.pictureBoxTireBR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxTireBR.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTireBR.Image")));
             this.pictureBoxTireBR.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxTireBR.InitialImage")));
-            this.pictureBoxTireBR.Location = new System.Drawing.Point(1139, 499);
+            this.pictureBoxTireBR.Location = new System.Drawing.Point(1100, 429);
             this.pictureBoxTireBR.Name = "pictureBoxTireBR";
             this.pictureBoxTireBR.Size = new System.Drawing.Size(40, 68);
             this.pictureBoxTireBR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -380,7 +350,7 @@
             this.pictureBoxBrakeBL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxBrakeBL.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBrakeBL.Image")));
             this.pictureBoxBrakeBL.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxBrakeBL.InitialImage")));
-            this.pictureBoxBrakeBL.Location = new System.Drawing.Point(1001, 520);
+            this.pictureBoxBrakeBL.Location = new System.Drawing.Point(962, 450);
             this.pictureBoxBrakeBL.Name = "pictureBoxBrakeBL";
             this.pictureBoxBrakeBL.Size = new System.Drawing.Size(18, 33);
             this.pictureBoxBrakeBL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -393,7 +363,7 @@
             this.pictureBoxBrakeBR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxBrakeBR.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBrakeBR.Image")));
             this.pictureBoxBrakeBR.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxBrakeBR.InitialImage")));
-            this.pictureBoxBrakeBR.Location = new System.Drawing.Point(1115, 520);
+            this.pictureBoxBrakeBR.Location = new System.Drawing.Point(1076, 450);
             this.pictureBoxBrakeBR.Name = "pictureBoxBrakeBR";
             this.pictureBoxBrakeBR.Size = new System.Drawing.Size(18, 33);
             this.pictureBoxBrakeBR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -406,7 +376,7 @@
             this.pictureBoxBrakeFL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxBrakeFL.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBrakeFL.Image")));
             this.pictureBoxBrakeFL.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxBrakeFL.InitialImage")));
-            this.pictureBoxBrakeFL.Location = new System.Drawing.Point(1001, 277);
+            this.pictureBoxBrakeFL.Location = new System.Drawing.Point(962, 207);
             this.pictureBoxBrakeFL.Name = "pictureBoxBrakeFL";
             this.pictureBoxBrakeFL.Size = new System.Drawing.Size(18, 33);
             this.pictureBoxBrakeFL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -419,7 +389,7 @@
             this.pictureBoxBrakeFR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxBrakeFR.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBrakeFR.Image")));
             this.pictureBoxBrakeFR.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxBrakeFR.InitialImage")));
-            this.pictureBoxBrakeFR.Location = new System.Drawing.Point(1115, 277);
+            this.pictureBoxBrakeFR.Location = new System.Drawing.Point(1076, 207);
             this.pictureBoxBrakeFR.Name = "pictureBoxBrakeFR";
             this.pictureBoxBrakeFR.Size = new System.Drawing.Size(18, 33);
             this.pictureBoxBrakeFR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -432,7 +402,7 @@
             this.tireInnerTempFL.AutoSize = true;
             this.tireInnerTempFL.BackColor = System.Drawing.Color.Transparent;
             this.tireInnerTempFL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tireInnerTempFL.Location = new System.Drawing.Point(853, 272);
+            this.tireInnerTempFL.Location = new System.Drawing.Point(814, 202);
             this.tireInnerTempFL.Name = "tireInnerTempFL";
             this.tireInnerTempFL.Size = new System.Drawing.Size(92, 13);
             this.tireInnerTempFL.TabIndex = 21;
@@ -445,7 +415,7 @@
             this.tireInnerTempFR.AutoSize = true;
             this.tireInnerTempFR.BackColor = System.Drawing.Color.Transparent;
             this.tireInnerTempFR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tireInnerTempFR.Location = new System.Drawing.Point(1185, 272);
+            this.tireInnerTempFR.Location = new System.Drawing.Point(1146, 202);
             this.tireInnerTempFR.Name = "tireInnerTempFR";
             this.tireInnerTempFR.Size = new System.Drawing.Size(92, 13);
             this.tireInnerTempFR.TabIndex = 22;
@@ -458,7 +428,7 @@
             this.tireInnerTempBL.AutoSize = true;
             this.tireInnerTempBL.BackColor = System.Drawing.Color.Transparent;
             this.tireInnerTempBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tireInnerTempBL.Location = new System.Drawing.Point(853, 512);
+            this.tireInnerTempBL.Location = new System.Drawing.Point(814, 442);
             this.tireInnerTempBL.Name = "tireInnerTempBL";
             this.tireInnerTempBL.Size = new System.Drawing.Size(92, 13);
             this.tireInnerTempBL.TabIndex = 23;
@@ -471,7 +441,7 @@
             this.tireInnerTempBR.AutoSize = true;
             this.tireInnerTempBR.BackColor = System.Drawing.Color.Transparent;
             this.tireInnerTempBR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tireInnerTempBR.Location = new System.Drawing.Point(1185, 512);
+            this.tireInnerTempBR.Location = new System.Drawing.Point(1146, 442);
             this.tireInnerTempBR.Name = "tireInnerTempBR";
             this.tireInnerTempBR.Size = new System.Drawing.Size(92, 13);
             this.tireInnerTempBR.TabIndex = 24;
@@ -484,7 +454,7 @@
             this.brakeTempFL.AutoSize = true;
             this.brakeTempFL.BackColor = System.Drawing.Color.Transparent;
             this.brakeTempFL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brakeTempFL.Location = new System.Drawing.Point(853, 285);
+            this.brakeTempFL.Location = new System.Drawing.Point(814, 215);
             this.brakeTempFL.Name = "brakeTempFL";
             this.brakeTempFL.Size = new System.Drawing.Size(96, 13);
             this.brakeTempFL.TabIndex = 25;
@@ -497,7 +467,7 @@
             this.brakeTempFR.AutoSize = true;
             this.brakeTempFR.BackColor = System.Drawing.Color.Transparent;
             this.brakeTempFR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brakeTempFR.Location = new System.Drawing.Point(1185, 285);
+            this.brakeTempFR.Location = new System.Drawing.Point(1146, 215);
             this.brakeTempFR.Name = "brakeTempFR";
             this.brakeTempFR.Size = new System.Drawing.Size(96, 13);
             this.brakeTempFR.TabIndex = 26;
@@ -510,7 +480,7 @@
             this.brakeTempBL.AutoSize = true;
             this.brakeTempBL.BackColor = System.Drawing.Color.Transparent;
             this.brakeTempBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brakeTempBL.Location = new System.Drawing.Point(853, 525);
+            this.brakeTempBL.Location = new System.Drawing.Point(814, 455);
             this.brakeTempBL.Name = "brakeTempBL";
             this.brakeTempBL.Size = new System.Drawing.Size(96, 13);
             this.brakeTempBL.TabIndex = 27;
@@ -523,7 +493,7 @@
             this.brakeTempBR.AutoSize = true;
             this.brakeTempBR.BackColor = System.Drawing.Color.Transparent;
             this.brakeTempBR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brakeTempBR.Location = new System.Drawing.Point(1185, 525);
+            this.brakeTempBR.Location = new System.Drawing.Point(1146, 455);
             this.brakeTempBR.Name = "brakeTempBR";
             this.brakeTempBR.Size = new System.Drawing.Size(96, 13);
             this.brakeTempBR.TabIndex = 28;
@@ -536,7 +506,7 @@
             this.tirePressureFL.AutoSize = true;
             this.tirePressureFL.BackColor = System.Drawing.Color.Transparent;
             this.tirePressureFL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tirePressureFL.Location = new System.Drawing.Point(853, 298);
+            this.tirePressureFL.Location = new System.Drawing.Point(814, 228);
             this.tirePressureFL.Name = "tirePressureFL";
             this.tirePressureFL.Size = new System.Drawing.Size(80, 13);
             this.tirePressureFL.TabIndex = 29;
@@ -549,7 +519,7 @@
             this.tirePressureFR.AutoSize = true;
             this.tirePressureFR.BackColor = System.Drawing.Color.Transparent;
             this.tirePressureFR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tirePressureFR.Location = new System.Drawing.Point(1185, 298);
+            this.tirePressureFR.Location = new System.Drawing.Point(1146, 228);
             this.tirePressureFR.Name = "tirePressureFR";
             this.tirePressureFR.Size = new System.Drawing.Size(80, 13);
             this.tirePressureFR.TabIndex = 30;
@@ -562,7 +532,7 @@
             this.tirePressureBL.AutoSize = true;
             this.tirePressureBL.BackColor = System.Drawing.Color.Transparent;
             this.tirePressureBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tirePressureBL.Location = new System.Drawing.Point(853, 540);
+            this.tirePressureBL.Location = new System.Drawing.Point(814, 470);
             this.tirePressureBL.Name = "tirePressureBL";
             this.tirePressureBL.Size = new System.Drawing.Size(80, 13);
             this.tirePressureBL.TabIndex = 31;
@@ -575,7 +545,7 @@
             this.tirePressureBR.AutoSize = true;
             this.tirePressureBR.BackColor = System.Drawing.Color.Transparent;
             this.tirePressureBR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tirePressureBR.Location = new System.Drawing.Point(1185, 540);
+            this.tirePressureBR.Location = new System.Drawing.Point(1146, 470);
             this.tirePressureBR.Name = "tirePressureBR";
             this.tirePressureBR.Size = new System.Drawing.Size(80, 13);
             this.tirePressureBR.TabIndex = 32;
@@ -586,7 +556,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(470, 141);
+            this.label2.Location = new System.Drawing.Point(400, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 26);
             this.label2.TabIndex = 38;
@@ -596,7 +566,7 @@
             // 
             this.lblThrottle.AutoSize = true;
             this.lblThrottle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThrottle.Location = new System.Drawing.Point(563, 141);
+            this.lblThrottle.Location = new System.Drawing.Point(493, 131);
             this.lblThrottle.Name = "lblThrottle";
             this.lblThrottle.Size = new System.Drawing.Size(53, 26);
             this.lblThrottle.TabIndex = 37;
@@ -609,7 +579,7 @@
             this.chart3.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(475, 466);
+            this.chart3.Location = new System.Drawing.Point(405, 456);
             this.chart3.Name = "chart3";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
@@ -626,7 +596,7 @@
             this.chart4.ChartAreas.Add(chartArea4);
             legend4.Name = "Legend1";
             this.chart4.Legends.Add(legend4);
-            this.chart4.Location = new System.Drawing.Point(475, 170);
+            this.chart4.Location = new System.Drawing.Point(405, 160);
             this.chart4.Name = "chart4";
             series4.ChartArea = "ChartArea1";
             series4.Legend = "Legend1";
@@ -640,7 +610,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(470, 437);
+            this.label4.Location = new System.Drawing.Point(400, 427);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 26);
             this.label4.TabIndex = 33;
@@ -650,7 +620,7 @@
             // 
             this.lblBrake.AutoSize = true;
             this.lblBrake.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrake.Location = new System.Drawing.Point(563, 437);
+            this.lblBrake.Location = new System.Drawing.Point(493, 427);
             this.lblBrake.Name = "lblBrake";
             this.lblBrake.Size = new System.Drawing.Size(50, 26);
             this.lblBrake.TabIndex = 34;
@@ -663,13 +633,13 @@
             this.chart5.ChartAreas.Add(chartArea5);
             legend5.Name = "Legend1";
             this.chart5.Legends.Add(legend5);
-            this.chart5.Location = new System.Drawing.Point(845, 582);
+            this.chart5.Location = new System.Drawing.Point(768, 513);
             this.chart5.Name = "chart5";
             series5.ChartArea = "ChartArea1";
             series5.Legend = "Legend1";
             series5.Name = "Series1";
             this.chart5.Series.Add(series5);
-            this.chart5.Size = new System.Drawing.Size(100, 85);
+            this.chart5.Size = new System.Drawing.Size(240, 220);
             this.chart5.TabIndex = 39;
             this.chart5.Text = "chart5";
             // 
@@ -680,117 +650,15 @@
             this.chart6.ChartAreas.Add(chartArea6);
             legend6.Name = "Legend1";
             this.chart6.Legends.Add(legend6);
-            this.chart6.Location = new System.Drawing.Point(955, 582);
+            this.chart6.Location = new System.Drawing.Point(1030, 513);
             this.chart6.Name = "chart6";
             series6.ChartArea = "ChartArea1";
             series6.Legend = "Legend1";
             series6.Name = "Series1";
             this.chart6.Series.Add(series6);
-            this.chart6.Size = new System.Drawing.Size(100, 85);
-            this.chart6.TabIndex = 40;
+            this.chart6.Size = new System.Drawing.Size(240, 220);
+            this.chart6.TabIndex = 41;
             this.chart6.Text = "chart6";
-            // 
-            // chart7
-            // 
-            this.chart7.BackColor = System.Drawing.Color.DarkCyan;
-            chartArea7.Name = "ChartArea1";
-            this.chart7.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart7.Legends.Add(legend7);
-            this.chart7.Location = new System.Drawing.Point(845, 674);
-            this.chart7.Name = "chart7";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chart7.Series.Add(series7);
-            this.chart7.Size = new System.Drawing.Size(100, 85);
-            this.chart7.TabIndex = 41;
-            this.chart7.Text = "chart7";
-            // 
-            // chart8
-            // 
-            this.chart8.BackColor = System.Drawing.Color.DarkCyan;
-            chartArea8.Name = "ChartArea1";
-            this.chart8.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart8.Legends.Add(legend8);
-            this.chart8.Location = new System.Drawing.Point(955, 674);
-            this.chart8.Name = "chart8";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chart8.Series.Add(series8);
-            this.chart8.Size = new System.Drawing.Size(100, 85);
-            this.chart8.TabIndex = 42;
-            this.chart8.Text = "chart8";
-            // 
-            // chart9
-            // 
-            this.chart9.BackColor = System.Drawing.Color.DarkCyan;
-            chartArea9.Name = "ChartArea1";
-            this.chart9.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chart9.Legends.Add(legend9);
-            this.chart9.Location = new System.Drawing.Point(1065, 582);
-            this.chart9.Name = "chart9";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.chart9.Series.Add(series9);
-            this.chart9.Size = new System.Drawing.Size(100, 85);
-            this.chart9.TabIndex = 43;
-            this.chart9.Text = "chart9";
-            // 
-            // chart10
-            // 
-            this.chart10.BackColor = System.Drawing.Color.DarkCyan;
-            chartArea10.Name = "ChartArea1";
-            this.chart10.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chart10.Legends.Add(legend10);
-            this.chart10.Location = new System.Drawing.Point(1177, 582);
-            this.chart10.Name = "chart10";
-            series10.ChartArea = "ChartArea1";
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.chart10.Series.Add(series10);
-            this.chart10.Size = new System.Drawing.Size(100, 85);
-            this.chart10.TabIndex = 44;
-            this.chart10.Text = "chart10";
-            // 
-            // chart11
-            // 
-            this.chart11.BackColor = System.Drawing.Color.DarkCyan;
-            chartArea11.Name = "ChartArea1";
-            this.chart11.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.chart11.Legends.Add(legend11);
-            this.chart11.Location = new System.Drawing.Point(1065, 674);
-            this.chart11.Name = "chart11";
-            series11.ChartArea = "ChartArea1";
-            series11.Legend = "Legend1";
-            series11.Name = "Series1";
-            this.chart11.Series.Add(series11);
-            this.chart11.Size = new System.Drawing.Size(100, 85);
-            this.chart11.TabIndex = 45;
-            this.chart11.Text = "chart11";
-            // 
-            // chart12
-            // 
-            this.chart12.BackColor = System.Drawing.Color.DarkCyan;
-            chartArea12.Name = "ChartArea1";
-            this.chart12.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.chart12.Legends.Add(legend12);
-            this.chart12.Location = new System.Drawing.Point(1177, 674);
-            this.chart12.Name = "chart12";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Series1";
-            this.chart12.Series.Add(series12);
-            this.chart12.Size = new System.Drawing.Size(100, 85);
-            this.chart12.TabIndex = 46;
-            this.chart12.Text = "chart12";
             // 
             // Form1
             // 
@@ -798,12 +666,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1282, 823);
-            this.Controls.Add(this.chart12);
-            this.Controls.Add(this.chart11);
-            this.Controls.Add(this.chart10);
-            this.Controls.Add(this.chart9);
-            this.Controls.Add(this.chart8);
-            this.Controls.Add(this.chart7);
             this.Controls.Add(this.chart6);
             this.Controls.Add(this.chart5);
             this.Controls.Add(this.label2);
@@ -866,12 +728,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -923,12 +779,6 @@
         private System.Windows.Forms.Label lblBrake;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart6;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart7;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart8;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart9;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart10;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart11;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart12;
     }
 }
 
